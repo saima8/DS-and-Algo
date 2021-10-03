@@ -33,6 +33,10 @@ The bedrock of all data structures, memory is the underlying concept that you ab
 ### Bit
 Short for **binary digit**, a bit is a fundamental unit of information in Computer Science that represents a state with one of two values, typically **0** and **1**.
 
+# Strings
+
+
+
 Any data stored in a computer is, at the most basic level, represented in bits. 
 
 ### Byte
@@ -62,3 +66,16 @@ Important points:
 * Bytes in memory can "point" to other bytes in memory, so as to store references to other data.
 * The amount of memory that a machine has is bounded, making it valuable to limit how much an algorithm takes up.
 * Accessing a byte or a fixed number of bytes (like 4 bytes or 8 bytes in the case of 32-bit and 64-bit integers) is an elementary operation, which can be loosely treated as a single unit of operational work.
+
+
+# Strings
+
+```
+string = "this is a string"
+newString = ""
+
+for char in string:
+  newString += char
+```
+
+The operation above has a time complexity of **O(n^2)** where n is the length of the **string**. because each addition of a character to **newString** creates an entirely new string and is itself an **O(n)** operation. Therefore, n O(n) operations are performed, leading to an O(n^2) time-complexity operation overall.
